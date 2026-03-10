@@ -44,4 +44,6 @@ app.py          — Streamlit dashboard (insights + feed + merchants)
 ---
 ## Categorisation Issues
 UPI merchant strings are notoriously dirty, as the raw name in a transaction is whatever the merchant registered with their bank/PSP, which could be their legal entity name, a random abbreviation, or a payment gateway ID. Even GPay and PhonePe's own apps struggle with this and use server-side ML models trained on millions of transactions to get it right.
-The current rule-based approach covers ~85-90% of common merchants. The production path would be a lightweight ML classifier trained on UPI transaction data, with a user-correction loop that lets users re-tag transactions that feeds back into the model.
+The current rule-based approach covers ~85-90% of common merchants. The production path would be a lightweight ML classifier trained on UPI transaction data, with a user-correction loop that lets users re-tag transactions, which feed back into the model.
+---
+Demo: https://upiexpense-j12.streamlit.app/ 
